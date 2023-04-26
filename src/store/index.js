@@ -1,14 +1,21 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
   state: {
+    favorite: [],
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
+    UPDATE_FAVORITES(state, payload) {
+      state.favorites = payload;
+    },
   },
   actions: {
+    addToFavorites({ state, commit }, payload) {
+      const airports = state.favorites;
+      airports.push(payload);
+      commit("UPDATE_FAVORITES", airports);
+    },
   },
-  modules: {
-  }
-})
+  modules: {},
+});
