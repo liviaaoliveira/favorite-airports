@@ -1,4 +1,4 @@
-# favorite-airports
+# Favorite Airports
 
 ## Project setup
 ```
